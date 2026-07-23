@@ -1,1 +1,11 @@
+local games = {
+    [126509999114328] = "https://raw.githubusercontent.com/coffee923/coffee-hub/refs/heads/main/99Nights"
+}
 
+local url = games[game.PlaceId]
+
+if url then
+    loadstring(game:HttpGet(url))()
+else
+    warn("Unsupported game: " .. game.PlaceId)
+end
